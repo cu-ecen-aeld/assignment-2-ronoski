@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
     FILE *file = fopen(file_path, "w");
     if (file == NULL) {
-        syslog(LOG_ERR, "Failed to open %s for writing: %s", file_path, strerror(errno));
+        syslog(LOG_ERR, "Failed to open %s for writing: %s ", file_path, strerror(errno));
         fprintf(stderr, "Error: could not open %s for writing: %s\n", file_path, strerror(errno));
         closelog();
         return EXIT_FAILURE;
